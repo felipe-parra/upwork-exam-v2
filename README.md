@@ -14,11 +14,11 @@ Working FastAPI API with a User and Profile models and schemas.
 ## Tasks
 
 - [✅] Create a [User](###User) and [Profile](###Profile) models and schemas
-- [ ] Develop a REST API exposing CRUD endpoints for both models
+- [✅] Develop a REST API exposing CRUD endpoints for both models
 - [ ] Test at least 2 endpoints using pytest (with fixtures)
-- [ ] Point docs to root path
-- [ ] Create requirements file
-- [ ] Add a section on `README.md` with setup (venv), install (pip), run and testing instructions
+- [✅] Point docs to root path
+- [✅] Create requirements file
+- [✅] Add a section on `README.md` with setup (venv), install (pip), run and testing instructions
 
 ### User
 
@@ -39,3 +39,33 @@ Working FastAPI API with a User and Profile models and schemas.
 - Implement proper folder structure
 - Validation must be done using Pydantic
 - Use multiple commits (when possible, use conventional commit messages)
+
+## Setup
+
+1. Start virtual environment (or using your python version or configured)
+
+```sh
+python3 -m venv .
+```
+
+2. Activate virtual environment
+
+```sh
+source bin/activate
+```
+
+2. Install packages
+
+```sh
+pip install -r ./requirements/base.txt
+```
+
+3. Run project
+
+```sh
+sh ./scripts/run.sh
+```
+
+---
+
+## Testing
