@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from .database import Base, engine
+from .api import user, profile
+
+app = FastAPI(
+    docs_url="/"
+)
+
+Base.metadata.create_all(bind=engine)
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+app.include_router(user.router)
+app.include_router(profile.router)
