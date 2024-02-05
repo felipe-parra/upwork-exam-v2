@@ -2,7 +2,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 from app.database import Base
-from app.models.user import user_favorite_profiles
+from app.models.favorite import user_favorite_profiles
 
 
 class Profile(Base):
