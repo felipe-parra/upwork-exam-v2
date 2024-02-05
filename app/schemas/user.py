@@ -15,7 +15,6 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: int
-    is_active: bool
     profiles: List[Profile] = []
 
     class Config:
